@@ -5,6 +5,10 @@ import Home from "../components/homepage/Home";
 import Blog from "../components/homepage/Blog";
 // import Nav from "../components/Nav";
 import Campaings from "../components/homepage/Campaings";
+import Volunteer from "../components/homepage/Volunteer";
+import Gallery from "../components/homepage/Gallery";
+import Team from "../components/homepage/Team";
+import Footer from "../components/homepage/Footer";
 
 const Homepage = () => {
   const [activeLink, setActiveLink] = useState<string>("Home");
@@ -15,6 +19,7 @@ const Homepage = () => {
     AboutUs: useRef<HTMLDivElement>(null),
     Campaigns: useRef<HTMLDivElement>(null),
     Blog: useRef<HTMLDivElement>(null),
+    Volunteer: useRef<HTMLDivElement>(null)
   };
 
 //   const scrollToSection = (sectionId: string) => {
@@ -37,9 +42,19 @@ const Homepage = () => {
       <div id="Campaigns" ref={sectionRefs.Campaigns}>
         <Campaings/>
       </div>
+      <div id="volunteer" ref={sectionRefs.Volunteer}>
+        <Volunteer/>
+      </div>
+      <div>
+        <Gallery/>
+      </div>
+      <div>
+        <Team/>
+      </div>
       <div id="Blog" ref={sectionRefs.Blog}>
         <Blog />
       </div>
+      <Footer/>
     </div>
   );
 };

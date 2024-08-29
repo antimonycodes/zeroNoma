@@ -12,8 +12,8 @@ const Campaigns = () => {
   };
 
   return (
-    <div className="bg-orange-500 px-4 md:px-16 py-4">
-      <h1 className="text-4xl font-bold text-center text-white">Campaigns</h1>
+    <div className="bg-secondary px-4 md:px-16 py-4">
+      <h1 className="text-4xl font-bold text-center text-black">Campaigns</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-8 my-8 mx-auto ">
         {cards.map((card, i) => (
           <div key={i} className="p-4 bg-white w-fit flex flex-col gap-2 rounded-md shadow-lg">
@@ -26,11 +26,11 @@ const Campaigns = () => {
             {/* Progress Bar */}
             <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
               <div
-                className="bg-red-700 h-2 rounded-full"
+                className="bg-colored h-2 rounded-full"
                 style={{ width: `${getProgressPercentage(card.currentAmount, card.totalAmount)}%` }}
               ></div>
             </div>
-            <div className="border bg-red-700 text-white w-fit p-2 rounded-md mt-2 cursor-pointer">Donate now</div>
+            <div className="border bg-colored text-white w-fit p-2 rounded-md mt-2 cursor-pointer">Donate now</div>
           </div>
         ))}
       </div>

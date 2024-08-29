@@ -51,7 +51,7 @@ const Nav: React.FC<NavProps> = ({ activeLink, setActiveLink, scrollToSection })
         ))}
       </div>
       <div className="flex items-center justify-between gap-4">
-        <div className="border rounded border-[#2E2E2E] px-4 py-1 cursor-pointer">Join us</div>
+        <div className="border rounded border-[#2E2E2E] px-4 py-1 cursor-pointer" onClick={() => handleItemClick("volunteer")}>Join us</div>
         <div className="text-white border rounded bg-[#E60716] px-6 py-1 cursor-pointer">Donate</div>
       </div>
     </div>
