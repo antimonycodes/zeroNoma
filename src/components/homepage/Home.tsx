@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import homebg from '../../assets/homebg.png'; 
 import Nav from '../Nav';
-import Numbers from './Numbers';
+// import Numbers from './Numbers';
 
 const Home = () => {
     const [activeLink, setActiveLink] = useState("home");
