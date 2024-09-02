@@ -100,7 +100,7 @@ const Nav: React.FC<NavProps> = ({ activeLink, setActiveLink, scrollToSection })
       </div>
       {menuOpen && (
         <motion.div
-          className={`py-4 px-4 absolute left-0 transition-all duration-500 ease-in ${menuOpen ? " top-[4rem]" : "top-[-100%]"}  flex flex-col items-center gap-4 w-full  bg-black`}
+          className={` h-screen py-4 px-4 absolute left-0 transition-all duration-500 ease-in ${menuOpen ? " top-[4rem]" : "top-[-100%]"}  flex flex-col items-center gap-4 w-full  bg-black`}
           initial="hidden"
           animate="visible"
           exit="hidden"
