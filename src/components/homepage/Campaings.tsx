@@ -14,9 +14,9 @@ const Campaigns = () => {
   return (
     <div className="bg-secondary px-4 md:px-16 py-4">
       <h1 className="text-4xl font-bold text-center text-black">Campaigns</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-8 my-8 mx-auto ">
+      <div className="  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-8 my-8 mx-auto ">
         {cards.map((card, i) => (
-          <div key={i} className="p-4 bg-white w-fit flex flex-col gap-2 rounded-md shadow-lg">
+          <div key={i} className=" mx-auto p-4 bg-white w-fit flex flex-col gap-2 rounded-md shadow-lg">
             <img src={card.img} alt="Campaign" className="rounded-md" />
             <h2 className="text-xl font-bold">{card.heading}</h2>
             <div className="flex justify-between">
@@ -30,7 +30,7 @@ const Campaigns = () => {
                 style={{ width: `${getProgressPercentage(card.currentAmount, card.totalAmount)}%` }}
               ></div>
             </div>
-            <div className="border bg-colored text-white w-fit p-2 rounded-md mt-2 cursor-pointer">Donate now</div>
+            <div className="border bg-colored hover:bg-coloredLight text-white  transition-all duration-700 w-fit p-2 rounded-md mt-2 cursor-pointer">Donate now</div>
           </div>
         ))}
       </div>

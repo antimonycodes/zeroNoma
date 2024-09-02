@@ -9,6 +9,7 @@ export default {
       colors: {
         secondary: "#FDF0F1",
         colored: "#E60716",
+        coloredLight: "#B00512",
         customGray: "#3A170080"
       },
     },

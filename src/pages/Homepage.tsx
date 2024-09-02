@@ -6,9 +6,10 @@ import Blog from "../components/homepage/Blog";
 // import Nav from "../components/Nav";
 import Campaings from "../components/homepage/Campaings";
 import Volunteer from "../components/homepage/Volunteer";
-import Gallery from "../components/homepage/Gallery";
+// import Gallery from "../components/homepage/Gallery";
 import Team from "../components/homepage/Team";
 import Footer from "../components/homepage/Footer";
+import Gal from "../components/homepage/Gal";
 
 const Homepage = () => {
   const [activeLink, setActiveLink] = useState<string>("Home");
@@ -46,7 +47,7 @@ const Homepage = () => {
         <Volunteer/>
       </div>
       <div>
-        <Gallery/>
+      <Gal/>
       </div>
       <div>
         <Team/>
