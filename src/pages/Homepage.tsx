@@ -1,4 +1,4 @@
-import  { useRef, useState } from "react";
+import  { useRef} from "react";
 import AboutUs from "../components/homepage/AboutUs";
 import Home from "../components/homepage/Home";
 // import Campaigns from "../components/homepage/Campaigns";
@@ -12,7 +12,7 @@ import Footer from "../components/homepage/Footer";
 import Gal from "../components/homepage/Gal";
 
 const Homepage = () => {
-  const [activeLink, setActiveLink] = useState<string>("Home");
+  // const [activeLink, setActiveLink] = useState<string>("Home");
 
   // Create refs for each section
   const sectionRefs = {
@@ -27,9 +27,9 @@ const Homepage = () => {
 //     sectionRefs[sectionId]?.current?.scrollIntoView({ behavior: "smooth" });
 //   };
 
-  const onUpdateActiveLink = (value: string) => {
-    setActiveLink(value);
-  };
+  // const onUpdateActiveLink = (value: string) => {
+  //   setActiveLink(value);
+  // };
 
   return (
     <div className="">

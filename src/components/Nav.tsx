@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import logo from "../assets/Nomalogo.png";
 import brandName from "../assets/logo.png.png";
-import logoWhite from "../assets/footerLogo.png"
+// import logoWhite from "../assets/footerLogo.png"
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 
