@@ -33,13 +33,14 @@ const Nav: React.FC<NavProps> = ({ activeLink, setActiveLink, scrollToSection })
   }, []);
 
   const handleItemClick = (sectionName: string) => {
+    document.body.classList.remove("no-scroll")
     scrollToSection(sectionName);
     setActiveLink(sectionName);
     setMenuOpen((prev)=> !prev)
   };
 
   const menuVariants = {
-    hidden: { opacity: 0 },
+    // hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
@@ -57,6 +58,18 @@ const Nav: React.FC<NavProps> = ({ activeLink, setActiveLink, scrollToSection })
     },
   };
 
+  useEffect(()=>{
+    if (menuOpen){
+      document.body.classList.add("no-scroll")
+    }else{
+      document.body.classList.remove("no-scroll")
+    }
+
+    return ()=>{
+      document.body.classList.remove("no-scroll")
+    }
+  },[menuOpen])
+
   return (
     <div className={` mx-0 md:mx-12 py-4 px-4 flex items-center justify-between bg-white shadow ${scrolled ? 'shadow-slate-300' : ''}`}>
       <div className="flex items-center gap-2">
@@ -67,7 +80,7 @@ const Nav: React.FC<NavProps> = ({ activeLink, setActiveLink, scrollToSection })
         {navlinks.map((navlink, index) => (
           <div key={index}>
             <h2
-              className={`cursor-pointer text-2xl font-semibold hover:text-colored hover:text-opacity-70 transition-colors duration-500  ${activeLink === navlink.name ? 'font-bold' : ''}`}
+              className={`cursor-pointer text-lg  font-medium hover:text-colored hover:text-opacity-70 transition-colors duration-500  ${activeLink === navlink.name ? 'font-bold' : ''}`}
               onClick={() => handleItemClick(navlink.name)}
             >
               {navlink.name}
@@ -77,10 +90,10 @@ const Nav: React.FC<NavProps> = ({ activeLink, setActiveLink, scrollToSection })
       </div>
       <div className="hidden md:flex items-center justify-between gap-4">
         <div className="border rounded border-[#2E2E2E] px-4 py-1 cursor-pointer" onClick={() => handleItemClick("volunteer")}>Join us</div>
-        <div className="text-white border rounded bg-[#E60716] px-6 py-1 cursor-pointer">Donate</div>
+        <div className="text-white border rounded bg-[#E60716] px-6 py-1 cursor-pointer" onClick={()=> handleItemClick("Campaigns")}>Donate</div>
       </div>
       {/* Mobile Menu */}
-      <div className="block md:hidden text-2xl transition-all duration-1000" onClick={()=> setMenuOpen((prev)=> !prev)}>
+      <div className="block md:hidden text-2xl transition-all duration-1000 cursor-pointer" onClick={()=> setMenuOpen((prev)=> !prev)}>
 
         {menuOpen? <IoMdClose/> : <GiHamburgerMenu/>}
         {/* <h1 className="cursor-pointer">Menu</h1>  */}
@@ -94,7 +107,7 @@ const Nav: React.FC<NavProps> = ({ activeLink, setActiveLink, scrollToSection })
           variants={menuVariants}
         >
           <div className="flex items-center justify-between">
-            <img src={logoWhite} alt="logo" width={200} className="mx-auto" />
+            {/* <img src={logoWhite} alt="logo" width={200} className="mx-auto" /> */}
             {/* <div className="cursor-pointer absolute top-6 right-4" onClick={() => setMenuOpen(false)}>
             <IoMdClose className=" text-white"/>
             </div> */}
@@ -112,8 +125,8 @@ const Nav: React.FC<NavProps> = ({ activeLink, setActiveLink, scrollToSection })
             ))}
           </motion.div>
           <motion.div className="flex flex-col items-center justify-between gap-4">
-            <div className="border rounded bg-white border-[#2E2E2E] px-4 py-1 cursor-pointer" onClick={() => handleItemClick("volunteer")}>Join us</div>
-            <div className="text-white border rounded bg-[#E60716] px-6 py-1 cursor-pointer">Donate</div>
+            <div className="border rounded bg-white border-[#2E2E2E] px-6 py-1 cursor-pointer" onClick={() => handleItemClick("volunteer")}>Join us</div>
+            <div className="text-white border rounded bg-[#E60716] px-6 py-1 cursor-pointer" onClick={()=> handleItemClick("Campaigns")}>Donate</div>
           </motion.div>
         </motion.div>
       )}

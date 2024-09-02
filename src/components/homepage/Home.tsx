@@ -26,7 +26,7 @@ const Home = () => {
         height: '100vh', 
         width: '100%' 
       }}
-      className=' h-screen'
+      className=' h-screen relative'
     >
         <div className=' absolute top-0 md:top-8 w-full'>
         <Nav  activeLink={activeLink}
@@ -39,8 +39,15 @@ const Home = () => {
                 <p className=' text-lg font-medium max-w-[100%] zl:max-w-[85%]'>Join us in our mission to safeguard the lives of African children from the devastating impact of noma</p>
                 </div>
         </div>
-    
-  
+        {/*  */}
+        <div className='absolute bottom-[-4%] w-full px-4 bg-secondary  py-4'>
+          <div>
+            <h1>OUR</h1>
+          </div>
+          <div></div>
+          <div></div>
+
+        </div>
     </div>
   );
 };

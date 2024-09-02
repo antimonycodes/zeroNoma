@@ -20,6 +20,11 @@
 html {
   scroll-behavior: smooth;
 }
+.no-scroll{
+  overflow: hidden;
+  position: fixed;
+  width: 100vw;
+}
 /* .container {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -202,6 +207,10 @@ html {
     /* grid-template-columns: 1fr; */
     display: flex;
     flex-direction: column;
+  }
+  .container img{
+    height: 400px;
+    object-fit: cover;
   }
 /* 
   .container img {

@@ -1,4 +1,6 @@
 import campaignsImg from "../../assets/campaigns.png";
+import { motion } from "framer-motion";
+
 
 const Campaigns = () => {
   const cards = [
@@ -30,7 +32,15 @@ const Campaigns = () => {
                 style={{ width: `${getProgressPercentage(card.currentAmount, card.totalAmount)}%` }}
               ></div>
             </div>
-            <div className="border bg-colored hover:bg-coloredLight text-white  transition-all duration-700 w-fit p-2 rounded-md mt-2 cursor-pointer">Donate now</div>
+            <motion.div
+              whileHover={{scale: 0.95, rotate: "2.5deg"}}
+              whileTap={{scale: 0.95, rotate: "2.5deg"}}
+              transition={{
+                duration: 0.125,
+                ease: "easeInOut"
+              }}
+              
+             className="border bg-colored  text-white  transition-all duration-700 w-fit p-2 rounded-md mt-2 cursor-pointer">Donate now</motion.div>
           </div>
         ))}
       </div>

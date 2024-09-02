@@ -12,7 +12,7 @@ const Team = () => {
     <div className="bg-secondary my-8 px-4 md:px-16 py-4">
       <h1 className="text-4xl font-bold text-center text-black">Our amazing team</h1> 
       {/*  */}
-      <div className=" w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4  gap-8 my-8 mx-auto ">
+      <div className={` w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4  gap-8 my-8 mx-auto `}>
         {teams.map((team,index)=>(
           <div key={index} className=" w-full bg-white  flex flex-col gap-2 rounded-md pb-2">
             <img src={team.img} alt="team" />
