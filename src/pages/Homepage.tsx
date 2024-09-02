@@ -47,7 +47,7 @@ const Homepage = () => {
         <Volunteer/>
       </div>
       <div>
-      <Gal/>
+      <Gal />
       </div>
       <div>
         <Team/>
