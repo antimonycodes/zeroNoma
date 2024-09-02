@@ -10,6 +10,7 @@ import Volunteer from "../components/homepage/Volunteer";
 import Team from "../components/homepage/Team";
 import Footer from "../components/homepage/Footer";
 import Gal from "../components/homepage/Gal";
+import Numbers from "../components/homepage/Numbers";
 
 const Homepage = () => {
   // const [activeLink, setActiveLink] = useState<string>("Home");
@@ -37,6 +38,7 @@ const Homepage = () => {
       <div id="Home" ref={sectionRefs.Home}>
         <Home />
       </div>
+      <Numbers/>
       <div id="AboutUs" ref={sectionRefs.AboutUs}>
         <AboutUs />
       </div>

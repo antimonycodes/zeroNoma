@@ -33,11 +33,14 @@ const Nav: React.FC<NavProps> = ({ activeLink, setActiveLink, scrollToSection })
   }, []);
 
   const handleItemClick = (sectionName: string) => {
-    document.body.classList.remove("no-scroll")
+    document.body.classList.remove("no-scroll");
     scrollToSection(sectionName);
     setActiveLink(sectionName);
-    setMenuOpen((prev)=> !prev)
+    if (menuOpen) {  // Only toggle menu if it's open (i.e., mobile view)
+      setMenuOpen(false);
+    }
   };
+  
 
   const menuVariants = {
     // hidden: { opacity: 0 },

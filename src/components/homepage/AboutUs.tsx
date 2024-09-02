@@ -2,7 +2,7 @@ import aboutImg from "../../assets/about.png";
 
 const AboutUs = () => {
   return (
-    <div className="px-4 md:px-16 py-12 flex flex-col md:flex-row gap-8 md:gap-16">
+    <div className="px-4 md:mt-20 md:px-16 py-12 flex flex-col md:flex-row gap-8 md:gap-16">
       <div className="flex-1 flex flex-col items-center md:items-start gap-8">
         <div className=" text-left">
           <h1 className="text-4xl font-bold pb-8 text-center md:text-left ">About Us</h1>

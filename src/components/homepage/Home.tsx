@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import homebg from '../../assets/homebg.png'; 
 import Nav from '../Nav';
+import Numbers from './Numbers';
 
 const Home = () => {
     const [activeLink, setActiveLink] = useState("home");
@@ -40,14 +41,6 @@ const Home = () => {
                 </div>
         </div>
         {/*  */}
-        <div className='absolute bottom-[-4%] w-full px-4 bg-secondary  py-4'>
-          <div>
-            <h1>OUR</h1>
-          </div>
-          <div></div>
-          <div></div>
-
-        </div>
     </div>
   );
 };
