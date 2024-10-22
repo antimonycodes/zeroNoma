@@ -38,7 +38,7 @@ const Homepage = () => {
         <Home />
       </div>
       <Numbers />
-      <div id="AboutUs" ref={sectionRefs.AboutUs}>
+      <div id="About Us" ref={sectionRefs.AboutUs}>
         <AboutUs />
       </div>
       <div id="Campaigns" ref={sectionRefs.Campaigns}>

@@ -30,7 +30,7 @@ const Home = () => {
       className="relative"
     >
       <div className="gradient-overlay"></div>
-      <div className="fixed z-[999] top-0 md:top-8 w-full mx-auto px-0 md:px-8">
+      <div className=" absolute z-[999] top-0 md:top-8 w-full mx-auto px-0 md:px-8">
         <Nav
           activeLink={activeLink}
           setActiveLink={onUpdateActiveLink}
@@ -42,7 +42,7 @@ const Home = () => {
           <h1 className="text-4xl md:text-6xl lg:text-[96px] leading-tight md:leading-[108%] font-bold">
             Combatting Noma <br /> in Africa
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl max-w-[80%] lg:max-w-[85%]">
+          <p className="text-lg md:text-xl lg:text-2xl max-w-[80%] lg:max-w-[746px] font-light leading-[36px]">
             Join us in our mission to safeguard the lives of African children
             from the devastating impact of noma.
           </p>

@@ -22,7 +22,7 @@ const AboutUs = () => {
           See more
         </div>
       </div>
-      <div className="flex-1 flex items-center max-h-[400px]">
+      <div className="flex-1 flex items-center min-h-[331px]">
         <img
           src={aboutImg}
           alt="About Us"

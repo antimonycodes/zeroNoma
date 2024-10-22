@@ -77,7 +77,7 @@ const Nav: React.FC<NavProps> = ({
   return (
     <div className="  w-full ">
       <div
-        className={`left-0 mx-auto w-[100%] z-[999]  py-4 px-4 xl:px-8 flex items-center justify-between ${
+        className={` left-0 mx-auto w-[100%] z-[999]  py-4 px-4 xl:px-8 flex items-center justify-between ${
           scrolled ? "bg-white shadow-lg" : " bg-white"
         } transition-all duration-300`}
       >
@@ -94,7 +94,7 @@ const Nav: React.FC<NavProps> = ({
           {navlinks.map((navlink, index) => (
             <h2
               key={index}
-              className={`cursor-pointer text-[#2E2E2E] xl:text-xl md:text-base font-medium hover:text-colored hover:text-opacity-70 transition-colors duration-500 ${
+              className={`cursor-pointer text-[#2E2E2E] lg:text-base xl:text-xl  font-medium hover:text-colored hover:text-opacity-70 transition-colors duration-500 ${
                 activeLink === navlink.name ? "font-bold" : ""
               }`}
               onClick={() => handleItemClick(navlink.name)}
