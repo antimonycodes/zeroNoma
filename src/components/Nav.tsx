@@ -81,7 +81,10 @@ const Nav: React.FC<NavProps> = ({
           scrolled ? "bg-white shadow-lg" : " bg-white"
         } transition-all duration-300`}
       >
-        <div className="flex items-center gap-1">
+        <div
+          className="flex items-center cursor-pointer gap-1 "
+          onClick={() => handleItemClick("Home")}
+        >
           <img src={logo} alt="logo" width={30} />
           <img src={brandName} alt="brand Name" width={100} />
         </div>

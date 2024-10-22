@@ -44,7 +44,7 @@ const Homepage = () => {
       <div id="Campaigns" ref={sectionRefs.Campaigns}>
         <Campaings />
       </div>
-      <div id="volunteer" ref={sectionRefs.Volunteer}>
+      <div id="Volunteer" ref={sectionRefs.Volunteer}>
         <Volunteer />
       </div>
       <div>

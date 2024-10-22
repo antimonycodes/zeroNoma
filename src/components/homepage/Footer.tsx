@@ -2,24 +2,22 @@ import logo from "../../assets/footerLogo.png";
 import facebook from "../../assets/facebook.svg";
 import insta from "../../assets/insta.svg";
 import twitter from "../../assets/twitter.svg";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Footer = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState<boolean>(false);
 
   const footerlinks = [
     { name: "Home" },
     { name: "AboutUs" },
     { name: "Campaigns" },
-    { name: "Volunteers" },
+    { name: "Volunteer" },
   ];
   const footerlinkBs = [
     { name: "Donate" },
     { name: "Gallery" },
     { name: "Blog" },
   ];
-  const [activeLink, setActiveLink] = useState("home");
 
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
@@ -28,23 +26,9 @@ const Footer = () => {
     }
   };
 
-  const onUpdateActiveLink = (value: string) => {
-    setActiveLink(value);
-  };
-
-  useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   const handleItemClick = (sectionName: string) => {
     document.body.classList.remove("no-scroll");
     scrollToSection(sectionName);
-    setActiveLink(sectionName);
     if (menuOpen) setMenuOpen(false);
   };
 
