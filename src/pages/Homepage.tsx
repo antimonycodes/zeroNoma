@@ -1,4 +1,4 @@
-import  { useRef} from "react";
+import { useRef } from "react";
 import AboutUs from "../components/homepage/AboutUs";
 import Home from "../components/homepage/Home";
 // import Campaigns from "../components/homepage/Campaigns";
@@ -21,12 +21,12 @@ const Homepage = () => {
     AboutUs: useRef<HTMLDivElement>(null),
     Campaigns: useRef<HTMLDivElement>(null),
     Blog: useRef<HTMLDivElement>(null),
-    Volunteer: useRef<HTMLDivElement>(null)
+    Volunteer: useRef<HTMLDivElement>(null),
   };
 
-//   const scrollToSection = (sectionId: string) => {
-//     sectionRefs[sectionId]?.current?.scrollIntoView({ behavior: "smooth" });
-//   };
+  //   const scrollToSection = (sectionId: string) => {
+  //     sectionRefs[sectionId]?.current?.scrollIntoView({ behavior: "smooth" });
+  //   };
 
   // const onUpdateActiveLink = (value: string) => {
   //   setActiveLink(value);
@@ -34,30 +34,29 @@ const Homepage = () => {
 
   return (
     <div className="">
-  
       <div id="Home" ref={sectionRefs.Home}>
         <Home />
       </div>
-      <Numbers/>
+      <Numbers />
       <div id="AboutUs" ref={sectionRefs.AboutUs}>
         <AboutUs />
       </div>
       <div id="Campaigns" ref={sectionRefs.Campaigns}>
-        <Campaings/>
+        <Campaings />
       </div>
       <div id="volunteer" ref={sectionRefs.Volunteer}>
-        <Volunteer/>
+        <Volunteer />
       </div>
       <div>
-      <Gal />
+        <Gal />
       </div>
       <div>
-        <Team/>
+        <Team />
       </div>
       <div id="Blog" ref={sectionRefs.Blog}>
         <Blog />
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

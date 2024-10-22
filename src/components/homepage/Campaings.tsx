@@ -1,46 +1,75 @@
 import campaignsImg from "../../assets/campaigns.png";
 import { motion } from "framer-motion";
 
-
 const Campaigns = () => {
   const cards = [
-    { img: campaignsImg, heading: "Fundraising For Children in Kaduna", currentAmount: 10200, totalAmount: 50000 },
-    { img: campaignsImg, heading: "Fundraising For Children in Kaduna", currentAmount: 50200, totalAmount: 100000 },
-    { img: campaignsImg, heading: "Fundraising For Children in Kaduna", currentAmount: 80200, totalAmount: 200000 }
+    {
+      img: campaignsImg,
+      heading: "Fundraising For Children in Kaduna",
+      currentAmount: 10200,
+      totalAmount: 50000,
+    },
+    {
+      img: campaignsImg,
+      heading: "Fundraising For Children in Kaduna",
+      currentAmount: 50200,
+      totalAmount: 100000,
+    },
+    {
+      img: campaignsImg,
+      heading: "Fundraising For Children in  Kaduna",
+      currentAmount: 80200,
+      totalAmount: 200000,
+    },
   ];
 
-  const getProgressPercentage = (currentAmount: number, totalAmount: number) => {
+  const getProgressPercentage = (
+    currentAmount: number,
+    totalAmount: number
+  ) => {
     return (currentAmount / totalAmount) * 100;
   };
 
   return (
     <div className="bg-secondary px-4 md:px-16 py-4">
-      <h1 className="text-4xl font-bold text-center text-black">Campaigns</h1>
+      <h1 className="text-4xl font-medium text-center text-black">Campaigns</h1>
       <div className="  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-8 my-8 mx-auto ">
         {cards.map((card, i) => (
-          <div key={i} className=" mx-auto p-4 bg-white w-fit flex flex-col gap-2 rounded-md shadow-lg">
+          <div
+            key={i}
+            className=" mx-auto p-4 bg-white w-fit flex flex-col gap-2 rounded-md shadow-lg"
+          >
             <img src={card.img} alt="Campaign" className="rounded-md" />
-            <h2 className="text-xl font-bold">{card.heading}</h2>
+            <h2 className="text-xl text-[#1D1D1D]  font-medium">
+              {card.heading}
+            </h2>
             <div className="flex justify-between">
-              <h2 className="text-xl font-bold">{`#${card.currentAmount.toLocaleString()}`}</h2>
-              <h2 className="text-xl font-bold text-slate-300">{`#${card.totalAmount.toLocaleString()}`}</h2>
+              <h2 className="text-xl font-medium text-[#1D1D1D]">{`#${card.currentAmount.toLocaleString()}`}</h2>
+              <h2 className="text-xl font-medium text-[#8A8A8A]">{`#${card.totalAmount.toLocaleString()}`}</h2>
             </div>
             {/* Progress Bar */}
             <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
               <div
                 className="bg-colored h-2 rounded-full"
-                style={{ width: `${getProgressPercentage(card.currentAmount, card.totalAmount)}%` }}
+                style={{
+                  width: `${getProgressPercentage(
+                    card.currentAmount,
+                    card.totalAmount
+                  )}%`,
+                }}
               ></div>
             </div>
             <motion.div
-              whileHover={{scale: 0.95, rotate: "2.5deg"}}
-              whileTap={{scale: 0.95, rotate: "2.5deg"}}
+              whileHover={{ scale: 0.95, rotate: "2.5deg" }}
+              whileTap={{ scale: 0.95, rotate: "2.5deg" }}
               transition={{
                 duration: 0.125,
-                ease: "easeInOut"
+                ease: "easeInOut",
               }}
-              
-             className="border bg-colored  text-white  transition-all duration-700 w-fit p-2 rounded-md mt-2 cursor-pointer">Donate now</motion.div>
+              className="border bg-colored  text-white  transition-all duration-700 w-fit p-2 rounded-md mt-2 cursor-pointer"
+            >
+              Donate now
+            </motion.div>
           </div>
         ))}
       </div>
