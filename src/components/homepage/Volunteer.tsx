@@ -2,11 +2,11 @@ import contactImg from "../../assets/contact.png";
 
 const Volunteer = () => {
   return (
-    <div className="flex  flex-col-reverse md:flex-row justify-center p-4 md:p-12">
-      <div className="flex flex-col-reverse md:flex-row gap-8 p-8 md:p-12 bg-secondary rounded-3xl w-full max-w-4xl">
+    <div className="flex  flex-col-reverse md:flex-row justify-center p-4 md:p-24">
+      <div className="flex flex-col md:flex-row gap-8 p-8 md:p-12 bg-secondary rounded-3xl w-full max-w-4xl">
         {/* Form Section */}
         <div className="flex-1 text-white">
-          <h1 className="font-semibold text-3xl text-[#333333] pb-8">
+          <h1 className="font-semibold text-2xl md:text-5xl text-[#333333] pb-8">
             Become A Volunteer
           </h1>
           <form action="" className="flex flex-col gap-4">
@@ -46,11 +46,11 @@ const Volunteer = () => {
           </form>
         </div>
         {/* Image Section */}
-        <div className="flex-1 flex justify-center items-center">
+        <div className="flex-1 flex rounded-[30px]">
           <img
             src={contactImg}
             alt="Contact Us"
-            className="w-full h-auto object-cover rounded-md shadow-lg"
+            className="w-full h-auto object-cover rounded-[30px] shadow-lg"
           />
         </div>
       </div>

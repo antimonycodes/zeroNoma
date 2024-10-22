@@ -31,21 +31,23 @@ const Campaigns = () => {
   };
 
   return (
-    <div className="bg-secondary px-4 md:px-16 py-4">
-      <h1 className="text-4xl font-medium text-center text-black">Campaigns</h1>
-      <div className="  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-8 my-8 mx-auto ">
+    <div className="bg-secondary px-4 md:px-16 py-12">
+      <h1 className="text-2xl md:text-5xl font-medium text-center text-black">
+        Campaigns
+      </h1>
+      <div className="  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8   my-8 mx-auto ">
         {cards.map((card, i) => (
           <div
             key={i}
             className=" mx-auto p-4 bg-white w-fit flex flex-col gap-2 rounded-md shadow-lg"
           >
             <img src={card.img} alt="Campaign" className="rounded-md" />
-            <h2 className="text-xl text-[#1D1D1D]  font-medium">
+            <h2 className="text-base md:text-xl text-[#1D1D1D]  font-medium">
               {card.heading}
             </h2>
             <div className="flex justify-between">
-              <h2 className="text-xl font-medium text-[#1D1D1D]">{`#${card.currentAmount.toLocaleString()}`}</h2>
-              <h2 className="text-xl font-medium text-[#8A8A8A]">{`#${card.totalAmount.toLocaleString()}`}</h2>
+              <h2 className=" text-base md:text-xl font-medium text-[#1D1D1D]">{`#${card.currentAmount.toLocaleString()}`}</h2>
+              <h2 className="text-base md:text-xl font-medium text-[#8A8A8A]">{`#${card.totalAmount.toLocaleString()}`}</h2>
             </div>
             {/* Progress Bar */}
             <div className="w-full bg-gray-200 rounded-full h-2 mt-2">

@@ -2,7 +2,7 @@ import campaignsImg from "../../assets/campaigns.png"; // Import the image
 
 const Gallery = () => {
   return (
-    <div className="container text-center relative h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5">
+    <div className="container text-center relative h-full max-w-6xl px-12 mx-auto xl:px-0 mt-5">
       <h2 className="mb-1 text-3xl font-extrabold leading-tight text-gray-900">
         Services
       </h2>

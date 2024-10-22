@@ -29,8 +29,10 @@ const Blog = () => {
   };
 
   return (
-    <div className="px-4 md:px-16 py-4 mb-16">
-      <h1 className="text-4xl font-medium text-center text-black">Blog</h1>
+    <div className="px-4 md:px-24 py-4 mb-16">
+      <h1 className=" text-2xl md:text-5xl font-medium text-center text-black">
+        Blog
+      </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-8 my-8 mx-auto ">
         {blogs.map((blog, i) => (
           <div
