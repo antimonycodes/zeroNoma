@@ -2,7 +2,7 @@ import { useRef } from "react";
 import AboutUs from "../components/homepage/AboutUs";
 import Home from "../components/homepage/Home";
 // import Campaigns from "../components/homepage/Campaigns";
-import Blog from "../components/homepage/Blog";
+// import Blog from "../components/homepage/Blog";
 // import Nav from "../components/Nav";
 import Campaings from "../components/homepage/Campaings";
 import Volunteer from "../components/homepage/Volunteer";
@@ -53,9 +53,9 @@ const Homepage = () => {
       <div>
         <Team />
       </div>
-      <div id="Blog" ref={sectionRefs.Blog}>
+      {/* <div id="Blog" ref={sectionRefs.Blog}>
         <Blog />
-      </div>
+      </div> */}
       <Footer />
     </div>
   );

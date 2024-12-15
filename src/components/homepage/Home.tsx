@@ -12,7 +12,6 @@ const Home = () => {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
-
   const onUpdateActiveLink = (value: string) => {
     setActiveLink(value);
   };
@@ -30,7 +29,7 @@ const Home = () => {
       className="relative"
     >
       <div className="gradient-overlay"></div>
-      <div className=" absolute z-[999] top-0 md:top-8 w-full mx-auto px-0 md:px-8">
+      <div className="fixed z-[999] top-0 md:top-8 w-full mx-auto px-0 md:px-8">
         <Nav
           activeLink={activeLink}
           setActiveLink={onUpdateActiveLink}

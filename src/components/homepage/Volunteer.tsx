@@ -16,28 +16,28 @@ const Volunteer = () => {
                 id="fullName"
                 name="name"
                 placeholder="Full Name*"
-                className="bg-transparent p-4 rounded-md text-darkText border bg-white border-[#A8A8A8] placeholder:text-[#A8A8A8] caret-colored"
+                className="bg-transparent p-4 rounded-md text-black border bg-white border-[#A8A8A8] placeholder:text-[#A8A8A8] caret-colored"
               />
               <input
                 type="email"
                 id="email"
                 name="email"
                 placeholder="Email Address*"
-                className="bg-transparent p-4 rounded-md text-darkText border bg-white border-[#A8A8A8] placeholder:text-[#A8A8A8] caret-colored"
+                className="bg-transparent p-4 rounded-md text-black border bg-white border-[#A8A8A8] placeholder:text-[#A8A8A8] caret-colored"
               />
               <input
                 type="text"
                 id="phoneNumber"
                 name="phone"
                 placeholder="Phone Number*"
-                className="bg-transparent p-4 rounded-md text-darkText border bg-white border-[#A8A8A8] placeholder:text-[#A8A8A8] caret-colored"
+                className="bg-transparent p-4 rounded-md text-black border bg-white border-[#A8A8A8] placeholder:text-[#A8A8A8] caret-colored"
               />
 
               <textarea
                 id="message"
                 name="message"
                 placeholder="Message*"
-                className="bg-transparent p-4 rounded-md text-darkText border bg-white border-[#A8A8A8] placeholder:text-[#A8A8A8] caret-colored h-[156px]"
+                className="bg-transparent p-4 rounded-md text-black border bg-white border-[#A8A8A8] placeholder:text-[#A8A8A8] caret-colored h-[156px]"
               />
             </div>
             <button className="bg-colored hover:bg-[#B00512] transition-all duration-700 ease-in-out  py-[12px] px-[41px] rounded-lg text-white w-fit font-medium">

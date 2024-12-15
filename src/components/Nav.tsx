@@ -24,7 +24,7 @@ const Nav: React.FC<NavProps> = ({
     { name: "Home" },
     { name: "About Us" },
     { name: "Campaigns" },
-    { name: "Blog" },
+    // { name: "Blog" },
   ];
 
   useEffect(() => {
@@ -77,7 +77,7 @@ const Nav: React.FC<NavProps> = ({
   return (
     <div className="  w-full ">
       <div
-        className={` left-0 mx-auto w-[100%] z-[999]  py-4 px-4 xl:px-8 flex items-center justify-between ${
+        className={` left-0 mx-auto w-[100%] z-[999] rounded-[8px]  py-4 px-4 xl:px-8 flex items-center justify-between ${
           scrolled ? "bg-white shadow-lg" : " bg-white"
         } transition-all duration-300`}
       >
@@ -108,7 +108,7 @@ const Nav: React.FC<NavProps> = ({
         <div className="hidden md:flex items-center gap-4">
           <div
             className="border rounded border-[#2E2E2E] px-4 py-1 cursor-pointer"
-            onClick={() => handleItemClick("volunteer")}
+            onClick={() => handleItemClick("Volunteer")}
           >
             Join us
           </div>

@@ -9,13 +9,13 @@ const Team = () => {
   ];
 
   return (
-    <div className="bg-secondary my-16 px-4 md:px-24 py-4">
+    <div className="bg-secondary my-16 px-8 md:px-24 py-4">
       <h1 className=" text-2xl md:text-5xl font-medium text-center text-black">
         Our amazing team
       </h1>
       {/*  */}
       <div
-        className={` w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4  gap-8 my-8 mx-4 md:mx-auto `}
+        className={` w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8 my-8  md:mx-auto `}
       >
         {teams.map((team, index) => (
           <div
