@@ -1,23 +1,24 @@
 import campaignsImg from "../../assets/campaigns.png";
+import dostbanner from "../../assets/dots-banner.png";
 import { motion } from "framer-motion";
 
 const Campaigns = () => {
   const cards = [
     {
-      img: campaignsImg,
-      heading: "Fundraising For Children in Kaduna",
+      img: dostbanner,
+      heading: "Project DOTS",
       currentAmount: 10200,
       totalAmount: 50000,
     },
     {
       img: campaignsImg,
-      heading: "Fundraising For Children in Kaduna",
+      heading: "Project CDS ",
       currentAmount: 50200,
       totalAmount: 100000,
     },
     {
-      img: campaignsImg,
-      heading: "Fundraising For Children in  Kaduna",
+      img: dostbanner,
+      heading: "BeatNTDs ",
       currentAmount: 80200,
       totalAmount: 200000,
     },
@@ -39,18 +40,18 @@ const Campaigns = () => {
         {cards.map((card, i) => (
           <div
             key={i}
-            className=" mx-auto p-4 bg-white w-fit flex flex-col gap-2 rounded-md shadow-lg"
+            className=" mx-auto px-4 py-8 bg-white w-fit flex flex-col gap-2 rounded-md shadow-lg"
           >
             <img src={card.img} alt="Campaign" className="rounded-md" />
             <h2 className="text-base md:text-xl text-[#1D1D1D]  font-medium">
               {card.heading}
             </h2>
-            <div className="flex justify-between">
+            {/* <div className="flex justify-between">
               <h2 className=" text-base md:text-xl font-medium text-[#1D1D1D]">{`#${card.currentAmount.toLocaleString()}`}</h2>
               <h2 className="text-base md:text-xl font-medium text-[#8A8A8A]">{`#${card.totalAmount.toLocaleString()}`}</h2>
-            </div>
+            </div> */}
             {/* Progress Bar */}
-            <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+            {/* <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
               <div
                 className="bg-colored h-2 rounded-full"
                 style={{
@@ -60,7 +61,7 @@ const Campaigns = () => {
                   )}%`,
                 }}
               ></div>
-            </div>
+            </div> */}
             <motion.div
               whileHover={{ scale: 0.95, rotate: "2.5deg" }}
               whileTap={{ scale: 0.95, rotate: "2.5deg" }}

@@ -75,7 +75,7 @@ const Nav: React.FC<NavProps> = ({
   };
 
   return (
-    <div className="  w-full ">
+    <div className="  w-full shadow-2xl ">
       <div
         className={` left-0 mx-auto w-[100%] z-[999] rounded-[8px]  py-4 px-4 xl:px-8 flex items-center justify-between ${
           scrolled ? "bg-white shadow-lg" : " bg-white"

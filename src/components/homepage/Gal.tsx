@@ -1,9 +1,9 @@
 // import campaignsImg from "../../assets/campaigns.png"
 import img1 from "../../assets/gallery1.png";
 import img2 from "../../assets/gallery2.png";
-import img3 from "../../assets/gallery3.png";
+import img3 from "../../assets/new-gallery-img3.png";
 import img4 from "../../assets/gallery4.png";
-import img5 from "../../assets/gallery5.png";
+import img5 from "../../assets/new-gallery-img5.png";
 import img6 from "../../assets/gallery6.png";
 import img7 from "../../assets/gallery7.png";
 

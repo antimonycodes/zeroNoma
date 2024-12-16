@@ -2,9 +2,9 @@
 
 const Numbers = () => {
   const cards = [
-    { no: "20+", title: "Children reached" },
-    { no: "10+", title: "Children reached" },
-    { no: "5+", title: "Children reached" },
+    { no: "0+", title: "Outreaches done" },
+    { no: "0+", title: "LGAs Visited " },
+    { no: "0+", title: "Children screened" },
   ];
 
   return (
